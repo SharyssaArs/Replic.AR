@@ -1,0 +1,388 @@
+/* --- Importação da Fonte (Rajdhani) --- */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
+
+/* --- Variáveis Globais (Paleta de Cores) --- */
+:root {
+    --fundo-abissal: #120E1A;       /* Roxo Abissal (Fundo Principal) */
+    --fundo-grafite: #2A233D;       /* Grafite Tech (Cards, Seções secundárias) */
+    --texto-branco: #FFFFFF;        /* Branco Puro (Títulos H1, H2) */
+    --texto-nevoa: #D1CDEB;         /* Névoa Púrpura (Texto de Parágrafo) */
+    --texto-sutil: #827c9b;         /* Cor "apagadinha" para descrições secundárias */
+    --verde-cyber: #00FFA3;         /* Verde Cyber (Destaque principal) */
+    --roxo-eletrico: #9E46FF;      /* Roxo Elétrico (Destaque secundário, hover) */
+
+    /* Tipografia */
+    --font-principal: 'Rajdhani', sans-serif; 
+}
+
+/* --- Reset Básico e Estilos Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-principal);
+    background-color: var(--fundo-abissal); /* Fundo principal: Roxo Abissal */
+    color: var(--texto-nevoa);             /* Cor do texto geral: Névoa Púrpura */
+    line-height: 1.6;
+    overflow-x: hidden; /* Previne scroll horizontal em excesso */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto;
+}
+
+/* --- Títulos e Textos --- */
+h1, h2, h3 {
+    color: var(--texto-branco); /* Títulos: Branco Puro */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--verde-cyber); /* Links: Verde Cyber */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--roxo-eletrico); /* Hover de links: Roxo Elétrico */
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block; /* Remove espaços extras indesejados abaixo da imagem */
+}
+
+/* --- Botões --- */
+.cta-button, .button {
+    display: inline-block;
+    background-color: var(--verde-cyber); /* Botão principal: Verde Cyber */
+    color: var(--fundo-abissal);           /* Texto do botão: Roxo Abissal */
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover, .button:hover {
+    background-color: var(--roxo-eletrico); /* Hover do botão: Roxo Elétrico */
+    color: var(--texto-branco);             /* Texto do botão no hover: Branco Puro */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 163, 0.3); /* Sombra sutil de destaque */
+}
+
+/* --- Header & Navegação --- */
+header {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--fundo-grafite); /* Borda: Grafite Tech */
+    background-color: var(--fundo-abissal); /* Garante que o header tenha o fundo */
+    position: sticky; /* Fixa o cabeçalho no topo ao rolar */
+    top: 0;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para a logo (substituída por imagem no HTML) */
+.logo {
+    margin: 0;
+}
+
+.logo img {
+    height: 50px; /* Tamanho da logo: 50px de altura */
+    width: auto; /* Mantém proporção */
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.5rem; /* Espaçamento maior entre os itens de navegação */
+}
+
+nav a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--texto-nevoa); /* Itens de navegação: Névoa Púrpura */
+}
+
+nav a:hover {
+    color: var(--verde-cyber); /* Hover nos itens de navegação: Verde Cyber */
+}
+
+/* --- Seção Hero (COM IMAGEM DE FUNDO) --- */
+.hero {
+    /* Imagem de Fundo (Você precisa ter 'hero-background.jpg' na mesma pasta) */
+    background-image: linear-gradient(rgba(18, 14, 26, 0.7), rgba(18, 14, 26, 0.7)), url('../img/hero-background.jpg'); /* Adiciona um overlay escuro para o texto se destacar */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito parallax */
+    
+    padding: 8rem 0; /* Espaçamento interno */
+    min-height: 600px; /* Altura mínima para a imagem ser visível */
+    
+    display: flex; /* Para centralizar o conteúdo */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px; /* Limita a largura do texto para melhor leitura */
+    color: var(--texto-branco);
+}
+
+.hero-content h2 {
+    font-size: 4rem; /* Título maior */
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 15px rgba(0, 255, 163, 0.5); /* Sombra sutil para destaque */
+}
+
+.hero-content p {
+    font-size: 1.4rem; /* Parágrafo maior */
+    margin-bottom: 2.5rem;
+    color: var(--texto-nevoa);
+}
+
+/* --- Seção About Teaser --- */
+.about-teaser {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    padding: 6rem 0; /* Espaçamento interno maior */
+    border-top: 1px solid var(--fundo-grafite);
+    border-bottom: 1px solid var(--fundo-grafite);
+    background-color: var(--fundo-grafite); /* Fundo da seção: Grafite Tech */
+}
+
+.about-image {
+    flex-basis: 50%;
+    min-width: 300px; /* Garante que a imagem não fique muito pequena */
+}
+
+.about-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Sombra na imagem */
+}
+
+.about-text {
+    flex-basis: 50%;
+}
+
+.about-text h2 {
+    text-align: left; /* Título alinhado à esquerda nesta seção */
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Seção Produtos em Destaque (Com Layout 2 Colunas e Descrição Sutil) --- */
+.featured-products {
+    padding: 6rem 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Uma coluna por padrão */
+    gap: 3rem; /* Espaçamento entre os cards */
+}
+
+.product-card {
+    background-color: var(--fundo-grafite); /* Fundo do card: Grafite Tech */
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--roxo-eletrico); /* Borda: Roxo Elétrico */
+    
+    display: flex; /* Ativa o layout de coluna para a imagem e info */
+    gap: 2rem;
+    align-items: center; /* Alinha o conteúdo verticalmente no centro */
+    padding: 2.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra nos cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px); /* Efeito de flutuação */
+    box-shadow: 0 15px 30px rgba(0, 255, 163, 0.3); /* Sombra de destaque no hover */
+}
+
+.product-card img {
+    flex-basis: 40%; /* Imagem ocupa 40% da largura do card */
+    min-width: 250px; /* Garante que a imagem não fique muito pequena em telas menores */
+    border-radius: 8px;
+    border: 1px solid var(--verde-cyber);
+}
+
+.product-info {
+    flex-basis: 60%; /* Bloco de texto ocupa 60% da largura do card */
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h3 {
+    color: var(--verde-cyber); /* Título do card: Verde Cyber */
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.product-info p {
+    color: var(--texto-sutil); /* Cor para a descrição "apagadinha" */
+    font-size: 0.95rem;       /* Fonte um pouco menor */
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    max-width: 90%; /* Limita a largura para melhor leitura */
+}
+
+.product-info .price {
+    font-size: 2.5rem; /* Preço maior */
+    font-weight: 700;
+    color: var(--texto-branco); /* Preço: Branco Puro */
+    margin-bottom: 1.5rem;
+}
+
+.product-info ul {
+    margin-bottom: 2rem;
+}
+
+.product-info li {
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    color: var(--texto-nevoa);
+}
+
+.product-info li::before {
+    content: '→'; /* Símbolo de seta para listas */
+    color: var(--verde-cyber);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+
+/* --- Seção Galeria --- */
+.gallery {
+    padding: 6rem 0;
+    border-top: 1px solid var(--fundo-grafite);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo: 250px mín */
+    gap: 1.5rem;
+}
+
+.gallery-grid img {
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid var(--fundo-grafite);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px var(--verde-cyber); /* Sombra de destaque: Verde Cyber */
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--fundo-grafite);
+    color: var(--texto-sutil); /* Texto do footer: Cor sutil */
+    font-size: 0.9rem;
+}
+
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 992px) {
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+    .about-teaser {
+        flex-direction: column; /* Pilha em colunas em telas menores */
+        text-align: center;
+    }
+    .about-text h2 {
+        text-align: center;
+    }
+    .product-card {
+        flex-direction: column; /* Cards empilham em colunas */
+        text-align: center;
+    }
+    .product-card img, .product-info {
+        flex-basis: 100%; /* Ocupam largura total */
+    }
+    .product-info ul {
+        text-align: left; /* Mantém lista alinhada à esquerda */
+    }
+    .product-info li {
+        padding-left: 0;
+        text-align: center; /* Centraliza itens da lista */
+    }
+    .product-info li::before {
+        display: none; /* Remove a seta para evitar desorganização */
+    }
+    nav ul {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    nav ul {
+        flex-direction: column; /* Itens de navegação empilham */
+        gap: 1rem;
+        align-items: center;
+    }
+    header .container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Menos colunas na galeria */
+    }
+}

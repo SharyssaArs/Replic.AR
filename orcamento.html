@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Replic.AR - Orçamento</title>
+        
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <header>
+            <div class="container">
+                <h1 class="logo">
+                    <a href="index.html">
+                        <img src="img/LogoMarca.png" alt="Replic.AR - Página Inicial">
+                    </a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="orcamento.html">Orçamento</a></li>
+                        <li><a href="sobre.html">Sobre & Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="quote-page">
+                <h1>Solicite um Orçamento Personalizado</h1>
+                <p>Tem uma ideia única? Descreva seu projeto e vamos dar vida a ele. Quanto mais detalhes, melhor o orçamento.</p>
+
+                <form class="quote-form" action="/enviar-orcamento" method="POST" enctype="multipart/form-data">
+
+                    <fieldset>
+                        <legend>Informações de Contato</legend>
+                        <div class="form-group">
+                            <label for="name">Seu Nome:</label>
+                            <input type="text" id="name" name="user_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Seu E-mail:</label>
+                            <input type="email" id="email" name="user_email" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Detalhes do Projeto</legend>
+                        <div class="form-group">
+                            <label for="description">Descreva sua ideia:</label>
+                            <p class="description-hint">Ex: "Quero uma action figure do meu personagem de D&D, ele é um anão guerreiro com machado."</p>
+                            <textarea id="description" name="project_description" rows="6" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="references">Imagens de Referência:</label>
+                            <p class="description-hint">Envie artes conceituais, screenshots, ou desenhos (até 5 arquivos).</p>
+                            <input type="file" id="references" name="reference_files[]" multiple accept="image/*">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Opções da Figure</legend>
+                        
+                        <div class="form-group">
+                            <label for="size">Tamanho Aproximado:</label>
+                            <select id="size" name="figure_size">
+                                <option value="10cm">Pequeno (aprox. 15cm) - Nível Miniatura</option>
+                                <option value="18cm" selected>Médio (aprox. 30cm) - Tamanho Padrão Action Figure</option>
+                                <option value="25cm">Grande (aprox. 45cm) - Nível Estátua</option>
+                                <option value="custom">Outro (descrever acima)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group radio-group">
+                            <label>Material de Impressão:</label>
+                            
+                            <div class="radio-option">
+                                <input type="radio" id="material-pla" name="figure_material" value="pla" checked>
+                                <label for="material-pla">PLA (Padrão)</label>
+                                <p class="material-desc">Bom para peças de exibição com bom custo-benefício. Acabamento um pouco mais fosco.</p>
+                            </div>
+                            
+                            <div class="radio-option">
+                                <input type="radio" id="material-abs" name="figure_material" value="abs">
+                                <label for="material-abs">ABS (Resistente)</label>
+                                <p class="material-desc">Mais resistente a impactos e calor. Ideal se a peça for manuseada com frequência.</p>
+                            </div>
+
+                            <div class="radio-option">
+                                <input type="radio" id="material-resin" name="figure_material" value="resin">
+                                <label for="material-resin">Resina UV (Alto Detalhe)</label>
+                                <p class="material-desc">Qualidade máxima de detalhes, acabamento super liso. Perfeito para rostos e texturas complexas.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group radio-group">
+                            <label>Acabamento e Pintura:</label>
+                            <div class="radio-option">
+                                <input type="radio" id="paint-no" name="figure_painting" value="nao" checked>
+                                <label for="paint-no">Sem pintura (Cor única do material)</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="paint-yes" name="figure_painting" value="sim">
+                                <label for="paint-yes">Pintura Artesanal Completa (Feita à mão)</label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    
+                    <button type="submit" class="cta-button">Enviar Pedido de Orçamento</button>
+
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Replic.AR. Criado por Christph Araujo Rodrigues.</p>
+        </footer>
+
+    </body>
+</html>
