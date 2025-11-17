@@ -116,6 +116,95 @@ header .container {
     align-items: center;
 }
 
+/* --- Estilo do Menu Hambúrguer (Escondido no Desktop) --- */
+.menu-hamburguer {
+    display: none; /* Escondido por defeito */
+    font-size: 2rem; /* Tamanho do ícone */
+    color: var(--verde-cyber); /* Cor do ícone */
+    cursor: pointer;
+    user-select: none; /* Impede que o ícone seja selecionado como texto */
+}
+
+
+/* --- Media Queries para Responsividade --- */
+
+/* ... (as suas outras regras @media (max-width: 992px) ficam aqui) ... */
+
+
+/* --- REGRAS DO MODO MOBILE (AQUI É QUE A MÁGICA ACONTECE) --- */
+@media (max-width: 768px) {
+    
+    header {
+        position: static; /* Remove o "sticky" no telemóvel */
+    }
+
+    header .container {
+        flex-direction: row; /* Força a ficar em linha */
+        justify-content: space-between; /* Logo à esquerda, ícone à direita */
+        gap: 0;
+    }
+
+    /* Mostra o ícone do hambúrguer */
+    .menu-hamburguer {
+        display: block; /* Mostra o ícone */
+    }
+
+    /* Esconde a navegação normal */
+    nav#nav-menu {
+        position: fixed; /* Fica por cima de todo o conteúdo */
+        top: 0;
+        left: 0;
+        width: 100%; /* Largura total */
+        height: 100vh; /* Altura total */
+        background-color: var(--fundo-abissal); /* Fundo roxo */
+        
+        /* Centraliza os links */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        /* Começa escondido (fora da tela à direita) */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 2000; /* Garante que fica à frente de tudo */
+    }
+
+    /* ESTADO ATIVO: Quando o menu está aberto */
+    nav#nav-menu.active {
+        transform: translateX(0); /* Move o menu para dentro da tela */
+    }
+
+    /* Remove o layout de linha da navegação */
+    nav#nav-menu ul {
+        flex-direction: column; /* Links em coluna */
+        gap: 2.5rem; /* Espaçamento entre os links */
+        text-align: center;
+    }
+
+    nav#nav-menu a {
+        font-size: 2rem; /* Fonte maior para os links */
+        color: var(--texto-branco);
+    }
+    
+    /* ... (o resto das suas regras @media (max-width: 768px) ... */
+    
+    /* IMPORTANTE: Apague estas regras antigas de "nav ul" e "header .container"
+       que estavam dentro do @media (max-width: 768px) 
+       para não haver conflito.
+    */
+    /* APAGUE ISTO:
+    nav ul {
+        flex-direction: column; 
+        gap: 1rem;
+        align-items: center;
+    }
+    header .container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    */
+}
+
 /* Estilo para a logo (substituída por imagem no HTML) */
 .logo {
     margin: 0;

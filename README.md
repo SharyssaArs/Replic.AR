@@ -1,98 +1,101 @@
-# Projeto Integrador: Website "BiDUME" 🐾
+<div align="center"><img src="img/LogoMarca.png" alt="Logomarca Replic.AR" width="300">   
+    <h1>Replic.AR - Action Figures 3D</h1>
+</div> 
 
-Projeto de desenvolvimento front-end para a disciplina `DESENVOLVIMENTO FRONT END - GPE02M20110_4`. O objetivo foi planejar, prototipar e desenvolver um site estático vendável para um pequeno negócio real, utilizando HTML5 e CSS3, e publicá-lo com GitHub Pages.
+Integrantes e Papéis
+- Sharyssa Araujo - UC25104132: 
+1. UX Designer
+2. Desenvolvedor Front-End (HTML, CSS, JavaScript)
 
-**Link do Site Publicado:** [https://sharyssaars.github.io/projeto-bidume/]
+Sobre o Projeto
+- Este é o repositório do site institucional e e-commerce da Replic.AR, uma startup focada na criação e venda de action figures personalizadas e colecionáveis, produzidas com tecnologia de impressão 3D.
 
----
+Tema
+- E-commerce de colecionáveis (Action Figures) com foco em personalização via impressão 3D.
 
-## 1. Integrantes e Papéis
+Objetivo
+- Desenvolver uma plataforma web atraente e funcional onde os clientes possam comprar itens de coleções pré-definidas (Linhas CORE, PRO e APEX) e solicitar orçamentos para peças 100% personalizadas.
 
-* **[Sharyssa Silva - UC25104132]** - (Desenvolvedor Front-end, UI/UX Designer)
+Público-Alvo
+- Colecionadores: Entusiastas de cultura pop (animes, games, filmes, quadrinhos) que buscam peças de alta qualidade e design exclusivo.
+- Jogadores de RPG: Pessoas que desejam materializar seus personagens de campanhas (ex: Dungeons & Dragons).
+- Público Geral: Pessoas em busca de um presente único, criativo e personalizado.
 
----
+Justificativa do Negócio
+- O mercado de colecionáveis está em constante crescimento. A Replic.AR se diferencia ao unir essa paixão com o poder da manufatura aditiva (impressão 3D), oferecendo um nível de personalização que a produção em massa não permite. O modelo de impressão sob demanda também reduz custos de estoque e permite um catálogo de produtos virtualmente infinito.
 
-## 2. O Negócio Escolhido
+Estrutura de Pastas e Arquivos
+-O projeto está organizado da seguinte maneira para garantir clareza e manutenabilidade:
 
-* **Nome do Negócio:** BiDUME - Impressão 3D para Pets
-* **Tema:** E-commerce / Site Institucional para um ateliê de produtos pet personalizados.
+    /ProjetoIntegrador - Replic.AR - 
+    │
+    ├── index.html          (Página Inicial / Home)
+    ├── produtos.html       (Página de coleções/produtos prontos)
+    ├── orcamento.html      (Formulário para encomendas)
+    ├── sobre.html          (Página "Sobre Nós" e "Contato")
+    │
+    ├── css/
+    │   └── style.css       (Folha de estilos principal)
+    │
+    ├── js/
+    │   └── script.js       (Arquivo de interatividade JavaScript)
+    │
+    ├── img/
+    │   ├── LogoMarca.png
+    │   ├── hero-background.jpg
+    │   ├── HornetHollowKnight.jpg
+    │   └── ... (todas as outras imagens do site)
+    │
+    └── README.md           (Este arquivo)
 
-### Objetivo do Site
-Criar uma presença online profissional e amigável para a "BiDUME", funcionando como uma vitrine digital (portfólio) e um principal canal de captação de clientes, direcionando-os para o contato (WhatsApp) para encomendas personalizadas.
+Etapas Realizadas
+    Data,Etapa,Responsável
+- 14out.2025, Concepção da marca (Naming, Público-Alvo)", Sharyssa A. Rodrigues
+- 14out.2025, Design da Identidade Visual (Logo e Paleta), Sharyssa A. Rodrigues
+- 14out.2025, Prototipagem de Baixa e Alta Fidelidade (Figma), Sharyssa A. Rodrigues
+- 17out.2025, Estruturação Semântica do HTML (Todas as páginas), Sharyssa A.Rodrigues
+- 21out.2025, Estilização principal com CSS (index.html), Sharyssa A. Rodrigues
+- 05nov.2025, Adição de interatividade (Desafios JavaScript), Sharyssa A. Rodrigues
+- 17nov.2025, Implementação do Menu Hambúrguer (Responsivo), Sharyssa A. Rodrigues
 
-### Público-Alvo
-"Pet lovers" (donos de cães e gatos), principalmente jovens adultos (20-40 anos), que buscam itens únicos, personalizados e afetuosos para seus animais de estimação e para si mesmos (como chaveiros).
+Justificativas de Design
+- As escolhas de design foram feitas para refletir uma marca moderna, tecnológica e premium, alinhada com o público "gamer" e "geek".
 
-### Potencial de Negócio
-O mercado pet é um dos que mais cresce, e a busca por produtos personalizados é uma tendência forte. Um site profissional aumenta a credibilidade da marca, que hoje pode depender apenas do Instagram, permitindo um alcance maior e centralizando informações (produtos, quem somos, contato) de forma clara.
+Fontes
+- Fonte Principal: Rajdhani (importada do Google Fonts).
+- Justificativa: 
+    É uma fonte sans-serif com visual geométrico e "quadrado", que remete à tecnologia, ao digital e ao futurismo. Mantém excelente legibilidade para títulos e textos, reforçando a estética tech da marca.
 
----
+Paleta de Cores
+- A paleta é baseada em um dark mode (modo escuro), que é o preferido pelo público-alvo (gamers, entusiastas de tecnologia) e destaca melhor as imagens vibrantes dos produtos.
+    Objetivo, Hex, CodeNome, Justificativa 
+    2. Fundo #120E1A - Roxo Abissal Cor principal. Um tom de roxo/preto que é sério, profissional e premium.
+    3. Cards #2A233D - Grafite Tech Fundo de seções e cards. Cria uma sutil profundidade visual sem competir com o fundo.
+    4. Texto #D1CDEB - Névoa Púrpura Cor do texto principal. É um cinza levemente roxo que é suave para os olhos e contrasta bem.
+    5. Destaque 1 #00FFA3 - Verde Cyber Cor de destaque (botões, links, títulos de cards). É uma cor "gamer", vibrante, que representa energia e tecnologia.
+    6. Destaque 2 #9E46FF - Roxo Elétrico Destaque secundário (bordas, hovers). Complementa o Verde Cyber e reforça a identidade da marca.
 
-## 3. Planejamento Visual e Justificativas de Design
+Ícones
+1. Ícones de Lista (→): A seta usada nas listas de produtos (.product-info li::before) é deliberadamente digital, simples e indica ação/avanço.
+2. Menu Hambúrguer (☰): Ícone universal para navegação em dispositivos móveis, garantindo usabilidade intuitiva.
 
-O design foi planejado para refletir a identidade visual "arredondada, divertida e amigável" da marca.
+Layout
+- O layout foi construído usando uma abordagem Mobile First e tecnologias modernas de CSS para garantir uma experiência de usuário fluida em qualquer dispositivo.
+1. display: flex (Flexbox): Usado extensivamente para alinhamentos de uma dimensão, como o cabeçalho (logo + nav), os cards de produto (imagem + info) e a centralização de conteúdo (como na seção hero).
+2. display: grid (Grid): Usado para a galeria de projetos, permitindo uma grade responsiva (auto-fit) que se adapta ao número de colunas disponível.
+3. Responsividade: O uso de media queries (especialmente em 768px) garante que o layout se adapte, colapsando elementos, centralizando texto e ativando o Menu Hambúrguer para economizar espaço e manter a legibilidade no mobile.
+    
+Próximos Passos
+- O projeto segue em desenvolvimento. As próximas etapas planejadas são:
+1. [ ] Estilização completa das páginas produtos.html, orcamento.html e sobre.html.
+2. [ ] Otimização de todas as imagens para formatos web (como .webp) para melhorar o tempo de carregamento.
+3. [ ] Refatoração do JavaScript para modularização.
+4. [ ] Validação "client-side" (com JavaScript) dos campos do formulário de orçamento.
+5. [ ] Implementação de um back-end simples (ou serviço de e-mail) para receber os pedidos de orçamento.
+6. [ ] Publicação final do site no GitHub Pages.
 
-* **Link para o Protótipo no Figma:** [https://www.figma.com/]
+Projeto Integrador Parte II
 
-### Paleta de Cores
+- Revisão e Diagnóstico do Projeto Atual
 
-Foram utilizadas duas paletas de forma harmônica: a paleta original da marca (para o logo) e uma paleta de "uso no site" (para a interface).
-
-| Elemento | Cor | Justificativa |
-| :--- | :--- | :--- |
-| **Logo (Original)** | `#F6872D` (Laranja) | Mantém a identidade original da marca, trazendo energia e diversão. |
-| **Logo (Original)** | `#3FC3C9` (Azul Piscina) | Cor amigável que complementa o laranja, também parte da ID original. |
-| **Fundo Geral** | `#F9F5EC` (Creme) | Cor de fundo original da marca. É um tom quente e suave, que serve como uma "tela" confortável para os outros elementos. |
-| **Botões / Ações** | `#C5E4C1` (Verde Pastel) | Cor primária do site. O verde remete à natureza e segurança, e o tom pastel é suave e moderno. Usado para botões de ação (CTAs). |
-| **Hover dos Botões** | `#A6CCA1` (Verde Médio) | Garante feedback visual claro ao usuário. |
-| **Detalhes / Links** | `#8B9E84` (Verde Musgo) | Cor secundária, usada em links e ícones. Tem ótimo contraste com o fundo creme e complementa o verde principal. |
-| **Textos / Títulos** | `#2E2E2E` (Preto Suave) | Usado para títulos e textos importantes. É mais suave que o preto puro (`#000`), melhorando o conforto de leitura. |
-| **Texto Principal** | `#5A5A5A` (Cinza Escuro) | Usado para parágrafos. Oferece excelente legibilidade sem ser tão "duro" quanto o preto. |
-| **Destaques** | `#F4CBAA` (Laranja Pastel) | Cor opcional usada em seções de destaque/promoção, criando um ponto de calor visual que atrai o olhar. |
-
-### Tipografia
-
-* **Fonte dos Títulos (`'Nunito'`):**
-    * **Justificativa:** Escolhemos a Nunito por suas terminações arredondadas. Ela se alinha perfeitamente à identidade "divertida e amigável" do logo, dando um ar moderno e acessível aos títulos.
-* **Fonte dos Textos (`'Lato'`):**
-    * **Justificativa:** Para o corpo do texto, a Lato oferece excelente legibilidade em diversos tamanhos. É uma fonte limpa, moderna e humanista, que equilibra a personalidade da Nunito sem cansar a leitura.
-
-### Layout e Componentes
-
-* **Cabeçalho Fixo (Sticky):** O menu permanece visível durante a rolagem, melhorando a navegação e o acesso às páginas principais (Home, Sobre, Contato) sem esforço.
-* **Hero Section (Banner):** A primeira seção da Home usa uma imagem de pets em tela cheia com um *overlay* escuro. Isso cria uma conexão emocional imediata com o público-alvo e permite que o texto de chamada se destaque com clareza.
-* **Cards de Produto:** Os produtos são apresentados em um grid limpo. Ao passar o mouse, um efeito sutil de `transform: translateY` e uma sombra mais pronunciada dão feedback interativo, incentivando o clique.
-* **Ícones (Font Awesome):** O uso de ícones no rodapé e na página de contato (WhatsApp, Instagram, Email) facilita o reconhecimento rápido das ações e torna a interface mais profissional.
-
----
-
-## 4. Estrutura de Pastas
-
-O projeto segue uma estrutura semântica e organizada:
-
-/projeto-site-bidume/ | |-- index.html (Página Home) |-- sobre.html (Página Sobre) |-- contato.html (Página Contato) | |-- /css/ | |-- style.css (Arquivo de estilos principal) | |-- /img/ | |-- logo-bidume.png | |-- hero-background.jpg | |-- plaquinha-identificacao.jpg | |-- chaveiro-pet.jpg | |-- (outras imagens...) | |-- README.md (Este arquivo)
-
----
-
-## 5. Etapas Realizadas
-
-| Data | Responsável(is) | Etapa Concluída |
-| :--- | :--- | :--- |
-| [Data] | [Nomes] | 1. Definição do tema, escopo, público-alvo e páginas. |
-| [Data] | [Nomes] | 2. Planejamento visual, escolha de cores e tipografia. |
-| [Data] | [Nomes] | 3. Desenvolvimento do esqueleto HTML semântico. |
-| [Data] | [Nomes] | 3. Estilização principal em CSS (Header, Footer, Hero, Cards). |
-| [Data] | [Nomes] | 3. Refinamento de design (efeitos de hover, ícones, responsividade básica). |
-| [Data] | [Nomes] | 4. Versionamento com Git e publicação no GitHub Pages. |
-| [Data] | [Nomes] | 5. Documentação do projeto (README.md). |
-
----
-
-## 6. Próximos Passos
-
-Embora o MVP (Produto Mínimo Viável) esteja completo, o projeto tem potencial para futuras melhorias:
-
-* [ ] Implementar responsividade avançada para *mobile*.
-* [ ] Criar uma página de "Galeria" com mais fotos de produtos.
-* [ ] Adicionar um formulário de contato funcional (usando uma solução back-end como Formspree ou Netlify Forms).
-* [ ] Otimizar imagens para melhor performance (WebP).
+1.
