@@ -100,6 +100,41 @@ img {
     box-shadow: 0 5px 15px rgba(0, 255, 163, 0.3); /* Sombra sutil de destaque */
 }
 
+/* --- Acessibilidade: Estilo de Foco Visível --- */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    /* Remove o anel padrão para o substituirmos */
+    outline: none; 
+    /* Cria um "anel duplo" que funciona em qualquer fundo:
+      1. Um anel de 3px da cor do fundo (para criar espaço)
+      2. Um anel de 5px da cor de destaque (verde)
+    */
+    box-shadow: 0 0 0 3px var(--fundo-abissal), 0 0 0 5px var(--verde-cyber);
+}
+
+/* --- Acessibilidade: Estilo do Skip Link --- */
+.skip-link {
+    position: absolute;
+    left: -9999px; /* Joga o link para fora da tela */
+    top: 10px;
+    z-index: 9999; /* Garante que fique no topo de tudo */
+    
+    /* Estilos para quando ele aparecer */
+    background: var(--verde-cyber);
+    color: var(--fundo-abissal);
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.skip-link:focus {
+    left: 10px; /* Traz o link de volta à tela quando focado */
+    outline: none; /* Já temos o estilo de foco global com box-shadow */
+}
+
 /* --- Header & Navegação --- */
 header {
     padding: 1.5rem 0;
@@ -320,11 +355,13 @@ nav a:hover {
     padding: 2.5rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra nos cards */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .product-card:hover {
     transform: translateY(-8px); /* Efeito de flutuação */
     box-shadow: 0 15px 30px rgba(0, 255, 163, 0.3); /* Sombra de destaque no hover */
+    border-color: var(--verde-cyber); /* ADICIONADO: Substitui o JS */
 }
 
 .product-card img {
@@ -340,18 +377,18 @@ nav a:hover {
     flex-direction: column;
 }
 
-.product-info h3 {
+.product-info h3, .product-info h2 { /* <-- CORRIGIDO AQUI */
     color: var(--verde-cyber); /* Título do card: Verde Cyber */
     font-size: 2.2rem;
     margin-bottom: 0.8rem;
 }
 
 .product-info p {
-    color: var(--texto-sutil); /* Cor para a descrição "apagadinha" */
-    font-size: 0.95rem;       /* Fonte um pouco menor */
+    color: var(--texto-nevoa); /* CORRIGIDO: Agora usa a cor principal de texto */
+    font-size: 1rem; /* CORRIGIDO: Tamanho padrão legível */
     font-style: italic;
     margin-bottom: 1.5rem;
-    max-width: 90%; /* Limita a largura para melhor leitura */
+    max-width: 90%; 
 }
 
 .product-info .price {
@@ -474,4 +511,19 @@ footer {
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Menos colunas na galeria */
     }
+}
+
+/* --- Acessibilidade: Estilo de Foco Visível --- */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    /* Remove o anel padrão para o substituirmos */
+    outline: none; 
+    /* Cria um "anel duplo" que funciona em qualquer fundo:
+      1. Um anel de 3px da cor do fundo (para criar espaço)
+      2. Um anel de 5px da cor de destaque (verde)
+    */
+    box-shadow: 0 0 0 3px var(--fundo-abissal), 0 0 0 5px var(--verde-cyber);
 }

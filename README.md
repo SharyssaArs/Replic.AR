@@ -1,203 +1,145 @@
-<div align="center"><img src="img/LogoMarca.png" alt="Logomarca Replic.AR" width="300">   
-    <h1>Replic.AR - Action Figures 3D</h1>
-</div> 
-
-Integrantes e Papéis
-- Sharyssa Araujo - UC25104132: 
-1. UX Designer
-2. Desenvolvedor Front-End (HTML, CSS, JavaScript)
-
-Sobre o Projeto
-- Este é o repositório do site institucional e e-commerce da Replic.AR, uma startup focada na criação e venda de action figures personalizadas e colecionáveis, produzidas com tecnologia de impressão 3D.
-
-Tema
-- E-commerce de colecionáveis (Action Figures) com foco em personalização via impressão 3D.
-
-Objetivo
-- Desenvolver uma plataforma web atraente e funcional onde os clientes possam comprar itens de coleções pré-definidas (Linhas CORE, PRO e APEX) e solicitar orçamentos para peças 100% personalizadas.
-
-Público-Alvo
-- Colecionadores: Entusiastas de cultura pop (animes, games, filmes, quadrinhos) que buscam peças de alta qualidade e design exclusivo.
-- Jogadores de RPG: Pessoas que desejam materializar seus personagens de campanhas (ex: Dungeons & Dragons).
-- Público Geral: Pessoas em busca de um presente único, criativo e personalizado.
-
-Justificativa do Negócio
-- O mercado de colecionáveis está em constante crescimento. A Replic.AR se diferencia ao unir essa paixão com o poder da manufatura aditiva (impressão 3D), oferecendo um nível de personalização que a produção em massa não permite. O modelo de impressão sob demanda também reduz custos de estoque e permite um catálogo de produtos virtualmente infinito.
-
-Estrutura de Pastas e Arquivos
--O projeto está organizado da seguinte maneira para garantir clareza e manutenabilidade:
+<div align="center">
+   <img src="img/LogoMarca.png" alt="Logomarca Replic.AR" width="300">
+   <h1>Replic.AR - Action Figures 3D</h1>
+</div>
 
-    /ProjetoIntegrador - Replic.AR - 
-    │
-    ├── index.html          (Página Inicial / Home)
-    ├── produtos.html       (Página de coleções/produtos prontos)
-    ├── orcamento.html      (Formulário para encomendas)
-    ├── sobre.html          (Página "Sobre Nós" e "Contato")
-    │
-    ├── css/
-    │   └── style.css       (Folha de estilos principal)
-    │
-    ├── js/
-    │   └── script.js       (Arquivo de interatividade JavaScript)
-    │
-    ├── img/
-    │   ├── LogoMarca.png
-    │   ├── hero-background.jpg
-    │   ├── HornetHollowKnight.jpg
-    │   └── ... (todas as outras imagens do site)
-    │
-    └── README.md           (Este arquivo)
+## Integrantes e Papéis
 
-Etapas Realizadas
-    Data,Etapa,Responsável
-- 14out.2025, Concepção da marca (Naming, Público-Alvo)", Sharyssa A. Rodrigues
-- 14out.2025, Design da Identidade Visual (Logo e Paleta), Sharyssa A. Rodrigues
-- 14out.2025, Prototipagem de Baixa e Alta Fidelidade (Figma), Sharyssa A. Rodrigues
-- 17out.2025, Estruturação Semântica do HTML (Todas as páginas), Sharyssa A.Rodrigues
-- 21out.2025, Estilização principal com CSS (index.html), Sharyssa A. Rodrigues
-- 05nov.2025, Adição de interatividade (Desafios JavaScript), Sharyssa A. Rodrigues
-- 17nov.2025, Implementação do Menu Hambúrguer (Responsivo), Sharyssa A. Rodrigues
+* **Sharyssa Araujo** - UC25104132:
+    * UX Designer
+    * Desenvolvedora Front-End (HTML, CSS, JavaScript)
 
-Justificativas de Design
-- As escolhas de design foram feitas para refletir uma marca moderna, tecnológica e premium, alinhada com o público "gamer" e "geek".
+---
 
-Fontes
-- Fonte Principal: Rajdhani (importada do Google Fonts).
-- Justificativa: 
-    É uma fonte sans-serif com visual geométrico e "quadrado", que remete à tecnologia, ao digital e ao futurismo. Mantém excelente legibilidade para títulos e textos, reforçando a estética tech da marca.
+## Sobre o Projeto
 
-Paleta de Cores
-- A paleta é baseada em um dark mode (modo escuro), que é o preferido pelo público-alvo (gamers, entusiastas de tecnologia) e destaca melhor as imagens vibrantes dos produtos.
-    Objetivo, Hex, CodeNome, Justificativa 
-    2. Fundo #120E1A - Roxo Abissal Cor principal. Um tom de roxo/preto que é sério, profissional e premium.
-    3. Cards #2A233D - Grafite Tech Fundo de seções e cards. Cria uma sutil profundidade visual sem competir com o fundo.
-    4. Texto #D1CDEB - Névoa Púrpura Cor do texto principal. É um cinza levemente roxo que é suave para os olhos e contrasta bem.
-    5. Destaque 1 #00FFA3 - Verde Cyber Cor de destaque (botões, links, títulos de cards). É uma cor "gamer", vibrante, que representa energia e tecnologia.
-    6. Destaque 2 #9E46FF - Roxo Elétrico Destaque secundário (bordas, hovers). Complementa o Verde Cyber e reforça a identidade da marca.
+Este é o repositório do site institucional e e-commerce da **Replic.AR**, uma startup fictícia focada na criação e venda de action figures personalizadas e colecionáveis, produzidas com tecnologia de impressão 3D.
 
-Ícones
-1. Ícones de Lista (→): A seta usada nas listas de produtos (.product-info li::before) é deliberadamente digital, simples e indica ação/avanço.
-2. Menu Hambúrguer (☰): Ícone universal para navegação em dispositivos móveis, garantindo usabilidade intuitiva.
+### Tema
 
-Layout
-- O layout foi construído usando uma abordagem Mobile First e tecnologias modernas de CSS para garantir uma experiência de usuário fluida em qualquer dispositivo.
-1. display: flex (Flexbox): Usado extensivamente para alinhamentos de uma dimensão, como o cabeçalho (logo + nav), os cards de produto (imagem + info) e a centralização de conteúdo (como na seção hero).
-2. display: grid (Grid): Usado para a galeria de projetos, permitindo uma grade responsiva (auto-fit) que se adapta ao número de colunas disponível.
-3. Responsividade: O uso de media queries (especialmente em 768px) garante que o layout se adapte, colapsando elementos, centralizando texto e ativando o Menu Hambúrguer para economizar espaço e manter a legibilidade no mobile.
-    
-Próximos Passos
-- O projeto segue em desenvolvimento. As próximas etapas planejadas são:
-1. [ ] Estilização completa das páginas produtos.html, orcamento.html e sobre.html.
-2. [ ] Otimização de todas as imagens para formatos web (como .webp) para melhorar o tempo de carregamento.
-3. [ ] Refatoração do JavaScript para modularização.
-4. [ ] Validação "client-side" (com JavaScript) dos campos do formulário de orçamento.
-5. [ ] Implementação de um back-end simples (ou serviço de e-mail) para receber os pedidos de orçamento.
-6. [ ] Publicação final do site no GitHub Pages.
+E-commerce de colecionáveis (Action Figures) com foco em personalização via impressão 3D.
 
+### Objetivo
 
+Desenvolver uma plataforma web atraente e funcional onde os clientes possam comprar itens de coleções pré-definidas (Linhas CORE, PRO e APEX) e solicitar orçamentos para peças 100% personalizadas.
 
-Projeto Integrador Parte II
+### Público-Alvo
 
-1. Revisão e Diagnóstico do Projeto Atual
+* **Colecionadores:** Entusiastas de cultura pop (animes, games, filmes, quadrinhos) que buscam peças de alta qualidade e design exclusivo.
+* **Jogadores de RPG:** Pessoas que desejam materializar seus personagens de campanhas (ex: Dungeons & Dragons).
+* **Público Geral:** Pessoas em busca de um presente único, criativo e personalizado.
 
-1.1 O que já está funcionando bem?
+### Justificativa do Negócio
 
-- Identidade Visual e Estrutura Principal:
+O mercado de colecionáveis está em constante crescimento. A Replic.AR se diferencia ao unir essa paixão com o poder da manufatura aditiva (impressão 3D), oferecendo um nível de personalização que a produção em massa não permite. O modelo de impressão sob demanda também reduz custos de estoque e permite um catálogo de produtos virtualmente infinito.
 
-    * A paleta de cores (roxo, verde e tons escuros) está muito bem definida e aplicada de forma consistente usando variáveis CSS (:root).
+---
 
-    * A estrutura semântica com <header>, <main> e <footer> está correta e é usada em todas as páginas.
+## Recursos Implementados
 
-- Estilização da Página Inicial (index.html):
+* **Modularização de Componentes (DRY):** O site utiliza carregamento dinâmico assíncrono (JavaScript `fetch`) para injetar componentes reutilizáveis (como `header.html` e `footer.html`), garantindo zero repetição de código e facilitando a manutenção.
+* **Design Responsivo (Mobile First):** Layout fluido que se adapta a todos os dispositivos, de 375px a desktops largos.
+* **Acessibilidade (WCAG):** Foco em semântica HTML, navegação completa por teclado e atributos ARIA para garantir uma experiência inclusiva.
+* **Interatividade com JS:**
+    * Menu Hambúrguer funcional para navegação mobile.
+    * Validação de formulário *client-side* para garantir a qualidade dos dados enviados.
+    * Efeitos de *hover* e outras interatividades para melhorar a experiência do usuário.
 
-    * A seção "Hero" está funcionando perfeitamente: o CSS aplica a imagem de fundo (hero-background.jpg) com um overlay escuro, e o conteúdo (.hero-content) é centralizado sobre ela.
+---
 
-    * Os cards de produto (.product-card) estão usando display: flex corretamente para criar o layout de duas colunas (imagem e texto).
+## Estrutura de Pastas e Arquivos
 
-    * A galeria de projetos (.gallery-grid) está funcional e responsiva, usando display: grid com auto-fit para se adaptar a diferentes tamanhos de tela.
+O projeto está organizado da seguinte maneira para garantir clareza e manutenabilidade:
 
-1.2 Quais elementos HTML se repetem em várias páginas?
+/ProjetoIntegrador - Replic.AR 
+│ 
+├── index.html (Página Inicial / Home) 
+├── produtos.html (Página de coleções/produtos prontos) 
+├── orcamento.html (Formulário para encomendas) 
+├── sobre.html (Página "Sobre Nós" e "Contato") 
+│ 
+├── css/ 
+│ └── style.css (Folha de estilos principal) 
+│ 
+├── js/ 
+│ └── script.js (Arquivo de interatividade JavaScript) 
+│ ├── componentes/ 
+│ ├── header.html (Componente do cabeçalho) 
+│ └── footer.html (Componente do rodapé) 
+│ ├── img/ 
+│ ├── LogoMarca.png 
+│ ├── hero-background.jpg 
+│ └── ... (todas as outras imagens do site) 
+│ └── README.md (Este arquivo)
 
-- <header>: O cabeçalho é o componente mais repetido. A estrutura contendo o .container, a logo (.logo) e a navegação (<nav>) é idêntica em todos os quatro arquivos HTML.
+---
 
-- <footer>: O rodapé é idêntico e está presente em todas as páginas.
+## 🎨 Decisões de Design (Identidade Visual)
 
-- .product-card: A estrutura do card de produto é reutilizada na index.html e na produtos.html.
+As escolhas de design foram feitas para refletir uma marca moderna, tecnológica e premium, alinhada com o público "gamer" e "geek".
 
-- .container: A classe de layout para centralizar o conteúdo é usada em todas as páginas.
+### Fontes
 
-1.3 Onde o layout "quebra" ou fica estranho?
+* **Fonte Principal:** `Rajdhani` (importada do Google Fonts).
+* **Justificativa:** É uma fonte sans-serif com visual geométrico e "quadrado", que remete à tecnologia, ao digital e ao futurismo. Mantém excelente legibilidade para títulos e textos, reforçando a estética *tech* da marca.
 
-- Páginas de Formulário (A Quebra Mais Grave):
+### Paleta de Cores
 
-    * As páginas orcamento.html e sobre.html estão funcionalmente quebradas.
+A paleta é baseada em um *dark mode* (modo escuro), que é o preferido pelo público-alvo (gamers, entusiastas de tecnologia) e destaca melhor as imagens vibrantes dos produtos.
 
-    * O arquivo css/style.css não possui nenhuma regra para as classes principais dessas páginas (como .quote-page, .quote-form, .form-group, .about-section, .contact-section).
+| Objetivo | Hex Code | Nome | Justificativa |
+| :--- | :--- | :--- | :--- |
+| Fundo | `#120E1A` | Roxo Abissal | Cor principal. Um tom de roxo/preto que é sério, profissional e premium. |
+| Cards | `#2A233D` | Grafite Tech | Fundo de seções e cards. Cria uma sutil profundidade visual. |
+| Texto | `#D1CDEB` | Névoa Púrpura | Cor do texto principal. É um cinza levemente roxo, suave para os olhos e com bom contraste. |
+| Destaque 1 | `#00FFA3` | Verde Cyber | Cor de destaque (botões, links). É uma cor "gamer", vibrante, que representa energia. |
+| Destaque 2 | `#9E46FF` | Roxo Elétrico | Destaque secundário (bordas, hovers). Complementa o Verde Cyber. |
 
-    * Como resultado, elas são renderizadas sem o fundo escuro (--fundo-abissal), com fontes padrão e sem qualquer estilização da sua identidade visual.
+### Layout
 
-- Layout Mobile (Menu):
+O layout foi construído usando uma abordagem **Mobile First** e tecnologias modernas de CSS para garantir uma experiência de usuário fluida:
 
-    * O cabeçalho está quebrado em telas pequenas. A regra CSS @media (max-width: 768px) força o header .container a usar flex-direction: column, o que empilha a logo e o menu, ocupando uma altura excessiva e criando uma péssima experiência (como visto na imagem image_a6321d.jpg).
+1.  **`display: flex` (Flexbox):** Usado extensivamente para alinhamentos de uma dimensão, como o cabeçalho (`logo + nav`), os cards de produto (`imagem + info`) e a centralização de conteúdo.
+2.  **`display: grid` (Grid):** Usado para a galeria de projetos, permitindo uma grade responsiva (`auto-fit`) que se adapta ao número de colunas disponível.
+3.  **Responsividade:** O uso de *media queries* (especialmente em `768px`) garante que o layout se adapte, colapsando elementos e ativando o Menu Hambúrguer para manter a legibilidade no mobile.
 
-- HTML Inválido (Atributos de Imagem):
+---
 
-    * Em todos os seus arquivos HTML, você está definindo dimensões fixas nas imagens com um erro de digitação: height=" 300" wight="330".
+## ⚡ Interatividades Adicionais
 
-    * O correto é width. Eles forçam um tamanho fixo e "brigam" com o CSS, quebrando a responsividade.
+### Validação de Formulário (JavaScript)
 
-- HTML Incompleto (Home):
+* **O que foi feito:** Foi adicionado um script de validação *client-side* ao formulário da página `orcamento.html`. O script é acionado no evento `onsubmit`.
+* **Como beneficia o usuário:** O script verifica se os campos obrigatórios (Nome, E-mail, Descrição) estão preenchidos corretamente *antes* de tentar enviar o formulário.
+    * Se um campo estiver vazio ou a descrição for muito curta, o envio é bloqueado (`event.preventDefault()`).
+    * O usuário recebe um `alert` informando exatamente quais campos precisam ser corrigidos.
+    * Os campos com erro têm sua borda destacada em vermelho, fornecendo um feedback visual claro e imediato.
+    * Isso evita a frustração de enviar um formulário incompleto e melhora a qualidade dos pedidos de orçamento recebidos pelo negócio.
 
-    * Na index.html, a seção .about-teaser está faltando a div da imagem (.about-image).
+---
 
-    * O CSS espera duas colunas (.about-image e .about-text) para aplicar o display: flex, e a ausência de uma delas quebra o layout dessa seção.
+## 🗺️ Status do Projeto
 
-1.4 Quais melhorias fariam diferença real para o usuário do pequeno negócio?
+### Etapas Realizadas
 
-- Estilizar os Formulários (Prioridade Máxima):
+| Data | Etapa | Responsável |
+| :--- | :--- | :--- |
+| 14/out/2025 | Concepção da marca (Naming, Público-Alvo) | Sharyssa A. Rodrigues |
+| 14/out/2025 | Design da Identidade Visual (Logo e Paleta) | Sharyssa A. Rodrigues |
+| 14/out/2025 | Prototipagem de Baixa e Alta Fidelidade (Figma) | Sharyssa A. Rodrigues |
+| 17/out/2025 | Estruturação Semântica do HTML (Todas as páginas) | Sharyssa A. Rodrigues |
+| 21/out/2025 | Estilização principal com CSS (index.html) | Sharyssa A. Rodrigues |
+| 05/nov/2025 | Adição de interatividade (Desafios JavaScript) | Sharyssa A. Rodrigues |
+| 17/nov/2025 | Implementação do Menu Hambúrguer (Responsivo) | Sharyssa A. Rodrigues |
+| 17/nov/2025 | Modularização (Header/Footer) com JS Fetch | Sharyssa A. Rodrigues |
 
-    * A melhoria mais crítica é adicionar os estilos para os formulários no css/style.css. As ações mais importantes para o negócio (pedir um orçamento e entrar em contato) estão nas páginas orcamento.html e sobre.html. Sem estilo, elas parecem quebradas e não são confiáveis para o usuário.
+### Próximos Passos
 
-- Implementar o Menu Hambúrguer (Prioridade Alta):
+O projeto segue em desenvolvimento. As próximas etapas planejadas são:
 
-    * Corrigir o menu mobile é essencial. A maioria dos clientes em potencial (vindos de redes sociais, por exemplo) acessará pelo celular. Se eles não puderem navegar para a página de "Orçamento", o negócio perde clientes.
-
-- Corrigir o HTML:
-
-    * Remover todos os atributos height e wight das tags <img> em todos os arquivos HTML. Isso permitirá que o CSS (max-width: 100%) controle o tamanho das imagens e as torne responsivas.
-
-    * Adicionar a div class="about-image" faltante na index.html para corrigir o layout da seção "Sobre" na página inicial.
-
-- Melhorar a Página de Produtos:
-
-    * Na produtos.html, o CSS define .product-grid para ter apenas uma coluna (grid-template-columns: 1fr;). Isso força o usuário a rolar muito para ver poucos produtos.
-
-    * A melhoria seria mudar essa regra para um grid responsivo (como o da galeria): grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));. Isso exibiria vários produtos lado a lado, melhorando muito a experiência de compra.
-
-2. Modularização do Código HTML
-
-- Cabeçalho (header): Ele é idêntico em todas as quatro páginas.
-
-    * Todos os arquivos (index.html, produtos.html, orcamento.html, sobre.html) usam exatamente o mesmo bloco <header>.
-
-    * A estrutura interna, incluindo div class="container", h1 class="logo", nav id="nav-menu" e div class="menu-hamburguer", é a mesma.
-
-- Menu de navegação (nav): Repete-se exatamente da mesma forma.
-
-    * O bloco <nav id="nav-menu"> e sua lista de links <ul>...</ul> é um componente 100% idêntico em todas as páginas.
-
-- Rodapé (footer): Aparece em todas as páginas e é idêntico.
-
-    * O bloco <footer><p>&copy; 2025...</p></footer> é reutilizado em index.html, produtos.html, orcamento.html e sobre.html.
-
-- Cards de produtos ou serviços: Vários cards com a mesma estrutura.
-
-    * A estrutura <article class="product-card"> é um componente reutilizável.
-
-    * A sua estrutura interna, contendo uma tag <img> e uma div class="product-info" (que por sua vez contém <h3>, <p>, <span class="price">, <ul> e <a class="button">), é a mesma tanto na index.html quanto na produtos.html.
-
-- Seções de contato ou depoimentos: As estruturas dos formulários são muito parecidas.
-
-    * O componente mais reutilizável aqui é o <div class="form-group">, que agrupa um <label> e um <input> (ou textarea, select).
-
-    * A estrutura é usada repetidamente no .contact-form (em sobre.html) e no .quote-form (em orcamento.html).
+* [ ] Estilização completa das páginas `produtos.html` e `sobre.html`.
+* [ ] Otimização de todas as imagens para formatos web (como `.webp`) para melhorar o tempo de carregamento.
+* [ ] Refatoração do JavaScript para modularização (separar funções em arquivos).
+* [X] Validação "client-side" (com JavaScript) dos campos do formulário de orçamento.
+* [ ] Implementação de um back-end simples (ou serviço de e-mail) para receber os pedidos de orçamento.
+* [ ] Publicação final do site no GitHub Pages.
