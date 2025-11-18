@@ -9,26 +9,7 @@
     </head>
     <body>
 
-        <header>
-            <div class="container">
-                <h1 class="logo">
-                    <a href="index.html">
-                        <img src="img/LogoMarca.png" alt="Replic.AR - Página Inicial">
-                    </a>
-                </h1>
-                <nav id="nav-menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="produtos.html">Produtos</a></li>
-                        <li><a href="orcamento.html">Orçamento</a></li>
-                        <li><a href="sobre.html">Sobre & Contato</a></li>
-                    </ul>
-                </nav>
-                <div class="menu-hamburguer" id="menu-hamburguer">
-                    ☰
-                </div>                
-            </div>
-        </header>
+        <div id="header-container"></div>
 
         <main>
             <section class="product-list-page">
@@ -101,11 +82,21 @@
             </section>
         </main>
 
-        <footer>
-            <p>&copy; 2025 Replic.AR. Criado por Christph Araujo Rodrigues.</p>
-        </footer>
+        <div id="footer-container"></div>
 
-        <script src="js/script.js"></script>
+
+        <script src="js/componentes.js"></script>
+        <script>
+            (async () => {
+                await carregarComponente('componentes/header.html', '#header-container');
+          
+                await carregarComponente('componentes/footer.html', '#footer-container');
+          
+                const script = document.createElement('script');
+                script.src = 'js/script.js';
+                document.body.appendChild(script);
+            })();
+        </script>
 
     </body>
 </html>

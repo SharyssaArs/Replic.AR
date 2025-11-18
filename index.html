@@ -9,26 +9,7 @@
     </head>
     <body>
 
-        <header>
-            <div class="container">
-                <h1 class="logo">
-                    <a href="index.html">
-                        <img src="img/LogoMarca.png" alt="Replic.AR - Página Inicial">
-                    </a>
-                </h1>
-                <nav id="nav-menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="produtos.html">Produtos</a></li>
-                        <li><a href="orcamento.html">Orçamento</a></li>
-                        <li><a href="sobre.html">Sobre & Contato</a></li>
-                    </ul>
-                </nav>
-                <div class="menu-hamburguer" id="menu-hamburguer">
-                    ☰
-                </div>
-            </div>
-        </header>
+        <div id="header-container"></div>
 
         <main>
             <section class="hero">
@@ -40,6 +21,11 @@
                 </section>
 
             <section class="about-teaser">
+                
+                <div class="about-image">
+                    <img src="img/EstudioDeImpressoes.jpg" alt="Estúdio de Impressão 3D Replic.AR">
+                </div>
+
                 <div class="about-text">
                     <h2 id="tituloSobre">Dando Vida à Imaginação em 3D</h2>
                     <p>Bem-vindo à Replic.AR, seu destino principal para action figures impressas em 3D. Somos especialistas em transformar imaginação em peças tangíveis e personalizadas, dando vida aos seus personagens favoritos.</p>
@@ -52,7 +38,7 @@
                 <div class="product-grid">
                     
                     <article class="product-card">
-                        <img src="img/HornetHollowKnight.jpg" alt="Personagem Hornet do jogo Hollow Knight." height=" 300" width="330">
+                        <img src="img/HornetHollowKnight.jpg" alt="Personagem Hornet do jogo Hollow Knight.">
                         <div class="product-info">
                             <h3>Básico: Linha CORE</h3>
                             <p>Por quê? "Core" significa "núcleo", o essencial. É o ponto de partida perfeito.</p>
@@ -67,7 +53,7 @@
                     </article>
 
                     <article class="product-card">
-                        <img src="img/NightWingDcComics.jpg" alt="Personagem NightWing da DC Comics" height=" 300" width="330">
+                        <img src="img/NightWingDcComics.jpg" alt="Personagem NightWing da DC Comics">
                         <div class="product-info">
                             <h3>Intermediário: Linha PRO</h3>
                             <p>Por quê? Curto para "Profissional" ou "Protótipo". Indica mais detalhes e customização.</p>
@@ -82,7 +68,7 @@
                     </article>
 
                     <article class="product-card">
-                        <img src="img/Light&RyukDeathNote.jpg" alt="Personagens Light e Ryuk do Anime DeathNote" height=" 300" width="330">
+                        <img src="img/Light&RyukDeathNote.jpg" alt="Personagens Light e Ryuk do Anime DeathNote">
                         <div class="product-info">
                             <h3>Avançado: Linha APEX</h3>
                             <p>Por quê? "Apex" é o ponto mais alto, o auge. Transmite ser o melhor produto disponível.</p>
@@ -115,11 +101,21 @@
 
         </main>
 
-        <footer>
-            <p>&copy; 2025 Replic.AR. Criado por Christph Araujo Rodrigues.</p>
-        </footer>
+        <div id="footer-container"></div>
 
-        <script src="js/script.js"></script>
+
+        <script src="js/componentes.js"></script>
+        <script>
+            (async () => {
+                await carregarComponente('componentes/header.html', '#header-container');
+          
+                await carregarComponente('componentes/footer.html', '#footer-container');
+          
+                const script = document.createElement('script');
+                script.src = 'js/script.js';
+                document.body.appendChild(script);
+            })();
+        </script>
 
     </body>
 </html>
