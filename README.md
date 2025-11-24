@@ -10,6 +10,19 @@
 
 ---
 
+## Acesso ao Site
+
+Aqui você pode conferir o projeto publicado e funcional:
+
+* **Link do GitHub Pages:** [https://sharyssaars.github.io/Replic.AR/]
+* **Data de Publicação:** 24/11/2025
+
+<div align="center">
+   <img src="img/print-site.PNG" alt="Captura de tela do site publicado" width="800" style="border-radius: 10px; border: 1px solid #2A233D;">
+</div>
+
+---
+
 ## Integrantes e Papéis
 
 * **Sharyssa Araujo** - UC25104132:
