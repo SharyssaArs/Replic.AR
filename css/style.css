@@ -527,3 +527,212 @@ select:focus {
     */
     box-shadow: 0 0 0 3px var(--fundo-abissal), 0 0 0 5px var(--verde-cyber);
 }
+
+/* --- PÁGINAS INTERNAS: ORÇAMENTO E CONTATO --- */
+
+/* Estilo Geral de Seções de Conteúdo */
+.quote-page, .about-section, .contact-section, .product-list-page {
+    padding: 4rem 0;
+}
+
+.quote-page h1, .product-list-page h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--verde-cyber);
+}
+
+.quote-page > p, .product-list-page > p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    color: var(--texto-nevoa);
+}
+
+/* --- Estilos de Formulários (Geral) --- */
+.quote-form, .contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--fundo-grafite);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--roxo-eletrico);
+}
+
+fieldset {
+    border: 1px solid var(--roxo-eletrico);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+legend {
+    color: var(--verde-cyber);
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--texto-branco);
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--fundo-abissal);
+    border: 1px solid var(--roxo-eletrico);
+    border-radius: 5px;
+    color: var(--texto-nevoa);
+    font-family: var(--font-principal);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--verde-cyber);
+    box-shadow: 0 0 8px rgba(0, 255, 163, 0.2);
+}
+
+.description-hint {
+    font-size: 0.85rem;
+    color: var(--texto-sutil);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+/* --- Opções de Rádio (Botões de seleção) --- */
+.radio-group {
+    margin-top: 1rem;
+}
+
+.radio-option {
+    margin-bottom: 1rem;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.radio-option:hover {
+    background-color: rgba(158, 70, 255, 0.1); /* Roxo bem clarinho */
+}
+
+.radio-option input {
+    margin-right: 10px;
+    accent-color: var(--verde-cyber); /* Muda a cor da bolinha do rádio */
+}
+
+.material-desc {
+    font-size: 0.9rem;
+    color: var(--texto-sutil);
+    margin-left: 25px; /* Alinha com o texto do label */
+    margin-top: 5px;
+}
+
+/* --- PÁGINA SOBRE --- */
+.about-section {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h1 {
+    font-size: 3rem;
+    color: var(--verde-cyber);
+    margin-bottom: 0.5rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    border-radius: 10px;
+    border: 2px solid var(--roxo-eletrico);
+    box-shadow: 0 0 20px rgba(158, 70, 255, 0.2);
+}
+
+/* --- Seção de Contato (Layout Lado a Lado) --- */
+.contact-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start; /* Alinha ao topo */
+}
+
+.contact-form {
+    flex: 2; /* O formulário ocupa mais espaço */
+    width: 100%; /* Garante que ocupe o espaço disponível */
+}
+
+.contact-info {
+    flex: 1; /* Informações ocupam menos espaço */
+    background-color: var(--fundo-grafite);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--roxo-eletrico);
+    height: 100%;
+}
+
+.contact-info h3 {
+    color: var(--verde-cyber);
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--fundo-grafite);
+    margin: 4rem 0;
+}
+
+/* --- RESPONSIVIDADE PARA PÁGINAS INTERNAS --- */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-content h2 {
+        text-align: center;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form, .contact-info {
+        width: 100%;
+    }
+    
+    .quote-form {
+        padding: 1rem;
+    }
+}
